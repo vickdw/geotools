@@ -18,15 +18,6 @@
  */
 package org.geotools.styling;
 
-import java.util.Collection;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
-
-import javax.measure.quantity.Length;
-import javax.measure.unit.Unit;
-import javax.swing.Icon;
-
 import org.geotools.factory.CommonFactoryFinder;
 import org.geotools.factory.GeoTools;
 import org.opengis.feature.type.Name;
@@ -38,16 +29,20 @@ import org.opengis.filter.expression.Function;
 import org.opengis.filter.expression.PropertyName;
 import org.opengis.metadata.citation.OnLineResource;
 import org.opengis.style.ColorReplacement;
-import org.opengis.style.ContrastMethod;
+import org.opengis.style.*;
 import org.opengis.style.Description;
 import org.opengis.style.ExternalMark;
-import org.opengis.style.GraphicFill;
 import org.opengis.style.GraphicLegend;
-import org.opengis.style.GraphicStroke;
-import org.opengis.style.GraphicalSymbol;
 import org.opengis.style.OverlapBehavior;
-import org.opengis.style.SemanticType;
 import org.opengis.util.InternationalString;
+
+import javax.measure.quantity.Length;
+import javax.measure.unit.Unit;
+import javax.swing.*;
+import java.util.Collection;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 
 /**
@@ -385,7 +380,7 @@ public class StyleFactoryImpl2 implements org.opengis.style.StyleFactory {
         polygonSymbolizer.setDescription( description );
         polygonSymbolizer.setDisplacement(displacement );
         polygonSymbolizer.setFill(fill);
-        polygonSymbolizer.setGeometryPropertyName( ((PropertyName)geometry).getPropertyName());
+        polygonSymbolizer.setGeometry(geometry);
         polygonSymbolizer.setName( name );
         polygonSymbolizer.setPerpendicularOffset( offset);
         polygonSymbolizer.setUnitOfMeasure( (Unit<Length>) unit);
