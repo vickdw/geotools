@@ -380,7 +380,7 @@ public class StyleFactoryImpl2 implements org.opengis.style.StyleFactory {
         polygonSymbolizer.setDescription( description );
         polygonSymbolizer.setDisplacement(displacement );
         polygonSymbolizer.setFill(fill);
-        polygonSymbolizer.setGeometry(geometry);
+        polygonSymbolizer.setGeometryPropertyName( ((PropertyName)geometry).getPropertyName() );
         polygonSymbolizer.setName( name );
         polygonSymbolizer.setPerpendicularOffset( offset);
         polygonSymbolizer.setUnitOfMeasure( (Unit<Length>) unit);
