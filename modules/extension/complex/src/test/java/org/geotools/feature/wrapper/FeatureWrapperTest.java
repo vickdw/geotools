@@ -9,10 +9,8 @@
  */
 package org.geotools.feature.wrapper;
 
-import java.io.InvalidClassException;
-import java.util.ArrayList;
-import java.util.Collection;
 import org.geotools.ExceptionChecker;
+import org.geotools.data.complex.feature.wrapper.FeatureWrapper;
 import org.geotools.feature.AttributeImpl;
 import org.geotools.feature.ComplexAttributeImpl;
 import org.geotools.feature.FakeTypes.Mine;
@@ -25,6 +23,10 @@ import org.opengis.feature.Attribute;
 import org.opengis.feature.ComplexAttribute;
 import org.opengis.feature.Feature;
 import org.opengis.feature.Property;
+
+import java.io.InvalidClassException;
+import java.util.ArrayList;
+import java.util.Collection;
 
 public class FeatureWrapperTest {
     private static Feature getFeature() {
